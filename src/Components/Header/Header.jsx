@@ -4,10 +4,11 @@ import { useState } from "react";
 import { AddMovies } from "../Modal/AddMovies";
 
 const HeaderCss = styled.div`
-  background-color: #073698;
+  background-color: rgb(7, 54, 152);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   padding: 0px 20px;
   margin-bottom: 1rem;
 `;

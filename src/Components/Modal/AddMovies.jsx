@@ -2,6 +2,7 @@ import { createRef, useState } from "react";
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 import { Modal } from "./Modal";
+import styled from "styled-components";
 
 export const AddMovies = ({ pushMoviesObject, addMovieHandler }) => {
   const [cancelModal, setCancelModal] = useState(false);
@@ -43,14 +44,24 @@ export const AddMovies = ({ pushMoviesObject, addMovieHandler }) => {
             inputType={"number"}
             ref={ratingInput}
           />
-          <Button
-            text="Cancel"
-            onClick={CancelModalHandler}
-            color="rgb(175,198,248)"
-          />
-          <Button onClick={inputValue} text="Add" color="blue" />
+          <ContanerBtn>
+            <Button
+              text="Cancel"
+              onClick={CancelModalHandler}
+              color="rgb(175,198,248)"
+            />
+            <Button onClick={inputValue} text="Add" color="blue" />
+          </ContanerBtn>
         </Modal>
       ) : null}
     </>
   );
 };
+
+const ContanerBtn = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-right: 0.7rem;
+  margin-top: 1rem;
+`

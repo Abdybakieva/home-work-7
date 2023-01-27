@@ -15,9 +15,10 @@ export const Input = forwardRef(
 
 
 const StuledInput=styled.input`
-    width: 90%;
+    width: 97%;
     border: 2px solid gray;
-    height: 20px;
+    height: 30px;
+    border-radius: 8px;
     margin: 0.5rem 0;
     
 `
